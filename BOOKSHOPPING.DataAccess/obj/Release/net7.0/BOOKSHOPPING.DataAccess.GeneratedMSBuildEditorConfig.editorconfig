@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BOOKSHOPPING.DataAccess
-build_property.ProjectDir = C:\Users\atita\source\repos\Book_shopping_App_Repository_Pattern\BOOKSHOPPING.DataAccess\
+build_property.ProjectDir = C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.DataAccess\

@@ -1,11 +1,14 @@
 ﻿using BOOKSHOPPING.DataAccess.Data;
 using BOOKSHOPPING.DataAccess.Repository.IRepository;
 using BOOKSHOPPING.Models;
+using BOOKSHOPPING.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BOOK_Shopping_WEB_App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
