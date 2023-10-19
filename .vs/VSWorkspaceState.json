@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\BOOK_Shopping_WEB_App",
-    "\\BOOK_Shopping_WEB_App\\Views",
-    "\\BOOK_Shopping_WEB_App\\Views\\Shared"
+    "\\BOOK_Shopping_WEB_App\\Areas\\Identity",
+    "\\BOOK_Shopping_WEB_App\\Areas\\Identity\\Pages",
+    "\\BOOK_Shopping_WEB_App\\Areas\\Identity\\Pages\\Account",
+    "\\BOOK_Shopping_WEB_App\\Areas\\Identity\\Pages\\Account\\Manage",
+    "\\BOOK_Shopping_WEB_App\\Views"
   ],
   "SelectedNode": "\\BOOK_Shopping_WEB_App\\BOOK_Shopping_WEB_App.sln",
   "PreviewInSolutionExplorer": false
