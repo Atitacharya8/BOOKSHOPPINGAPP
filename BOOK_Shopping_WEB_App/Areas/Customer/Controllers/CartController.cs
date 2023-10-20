@@ -31,7 +31,7 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
             foreach(var cart in ShoppingCartVM.ShoppingCartList)
             {
                 double price = GetPriceBasedOnQuantity(cart);
-                ShoppingCartVM.OrderTotal += (price * cart.Count);
+                ShoppingCartVM.OrderTotal += (cart.Price * cart.Count);
             }
                 
             return View(ShoppingCartVM);
