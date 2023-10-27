@@ -83,7 +83,7 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
 
             ShoppingCartVM.OrderHeader.OrderDate = System.DateTime.Now;
             ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
-            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.Get(u=>u.Id== userId);
+            ApplicationUser applicationUser= _unitOfWork.ApplicationUser.Get(u=>u.Id== userId);
                 
             foreach(var cart in ShoppingCartVM.ShoppingCartList)
             {
@@ -91,9 +91,9 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
                 ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count);
             }
 
-            if (ShoppingCartVM.OrderHeader.ApplicationUser.CompanyId.GetValueOrDefault() == 0)
+            if (applicationUser.CompanyId.GetValueOrDefault() == 0)
             {
-                //it is a regular customer account and we need to capture payment
+                //it is a regular customer
                 ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
                 ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
             }
@@ -122,11 +122,25 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
                 _unitOfWork.Save();
             }
 
-            return View(ShoppingCartVM);
-        }
+            if (applicationUser.CompanyId.GetValueOrDefault() == 0)
+            {
+                //it is a regular customer account and we need to capture payment
+                
+                //Stripe logic
+            }
 
+            return RedirectToAction(nameof(OrderConfirmation), new
+            {
+                id = ShoppingCartVM.OrderHeader.Id
+            });
+		}
 
-        public IActionResult Plus(int cartId)
+		public IActionResult OrderConfirmation(int id)
+		{
+			return View();
+		}
+
+		public IActionResult Plus(int cartId)
         {
             var cartFromDb= _unitOfWork.ShoppingCart.Get(u=>u.Id == cartId);
 
