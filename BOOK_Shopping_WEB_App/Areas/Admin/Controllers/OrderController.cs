@@ -1,5 +1,6 @@
 ﻿using BOOKSHOPPING.DataAccess.Repository.IRepository;
 using BOOKSHOPPING.Models;
+using BOOKSHOPPING.Models.ViewModels;
 using BOOKSHOPPING.Utility;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,16 @@ namespace BOOK_Shopping_WEB_App.Areas.Admin.Controllers
 		{
 			return View();
 		}
+
+        public IActionResult Details(int orderId)
+        {
+            OrderVM orderVM = new() 
+            {
+               OrderHeader =  _unitOfWork.OrderHeader.Get(u => u.Id == orderId, includeProperties: "ApplicationUser"),
+               OrderDetail = _unitOfWork.OrderDetail.GetAll(u=>u.OrderHeaderId == orderId, includeProperties:"Product")
+            };
+            return View(orderVM);
+        }
 
 		#region API CALLS
 		[HttpGet]
