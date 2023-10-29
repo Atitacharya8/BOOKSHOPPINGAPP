@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BOOK_Shopping_WEB_App.Areas.Admin.Controllers
 {
+
+	[Area("Admin")]
 	public class OrderController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;
