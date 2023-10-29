@@ -27,8 +27,10 @@ namespace BOOKSHOPPING.Models
         public string? Carrier {  get; set; }    
         
         public DateTime PaymentDate { get; set; }
+		public DateTime PaymentDueDate { get; set; }
+		public string? PaymentIntentId { get; set; }
 
-        [Required]
+		[Required]
         public string? PhoneNumber { get; set; }
         [Required]
         public string? StreetAddress { get; set; }
@@ -40,5 +42,7 @@ namespace BOOKSHOPPING.Models
         public string? PostalCode { get; set; }
         [Required]
         public string? Name { get; set; }
-    }
+		public string? SessionId { get; set; }
+		
+	}
 }

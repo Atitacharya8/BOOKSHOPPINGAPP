@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.ComponentModel;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace BOOKSHOPPING.DataAccess.Data
@@ -21,7 +23,9 @@ namespace BOOKSHOPPING.DataAccess.Data
         public DbSet<OrderHeader> OrderHeaders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+	
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder); // We should add this line when the IdentityDbContext is added above.
 
