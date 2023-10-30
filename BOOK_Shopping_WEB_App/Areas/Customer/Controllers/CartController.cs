@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Stripe.BillingPortal;
 using Stripe.Checkout;
 using System.Security.Claims;
-using Session = Stripe.Checkout.Session;
+using Microsoft.AspNetCore.Identity.UI.Services;
+
+
+
 
 namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
 {
@@ -132,14 +135,13 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
                 var domain = "https://localhost:7298/";
                 var options = new Stripe.Checkout.SessionCreateOptions
                 {
-					SuccessUrl = domain+ $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
-                    CancelUrl = domain+"customer/cart/index",
+                    SuccessUrl = domain + $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
+                    CancelUrl = domain + "customer/cart/index",
                     LineItems = new List<SessionLineItemOptions>(),
                     Mode = "payment",
-
                 };
 
-                foreach(var item in ShoppingCartVM.ShoppingCartList)
+                foreach (var item in ShoppingCartVM.ShoppingCartList)
                 {
                     var sessionLineItem = new SessionLineItemOptions
                     {
@@ -159,7 +161,7 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
                 }
 
                 var service = new Stripe.Checkout.SessionService();
-                Session session = service.Create(options);
+                Stripe.Checkout.Session session = service.Create(options);
                 _unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id,
                     session.Id, session.PaymentIntentId);
                 Response.Headers.Add("Location", session.Url);
@@ -181,7 +183,7 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
                 //this is an order by customer
 
                 var service = new Stripe.Checkout.SessionService();
-                Session session = service.Get(orderHeader.SessionId);
+                Stripe.Checkout.Session session = service.Get(orderHeader.SessionId);
 
                 if (session.PaymentStatus.ToLower() == "paid")
                 {
