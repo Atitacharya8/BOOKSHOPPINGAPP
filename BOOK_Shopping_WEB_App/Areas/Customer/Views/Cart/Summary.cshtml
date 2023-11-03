@@ -1,5 +1,6 @@
 ﻿@model ShoppingCartVM
 
+
 <form method="post">
 	<br />
 	<div class="container">
@@ -86,17 +87,16 @@
 								<span class="text-info">Order Summary:</span>
 							</h4>
 							<ul class="list-group mb-3">
-								@foreach(var details in Model.ShoppingCartList)
+								@foreach (var details in Model.ShoppingCartList)
 								{
-								<li class="list-group-item d-flex justify-content-between">
-									<div>
-										<h6 class="my-0">@details.Product.Title</h6>
-										<small class="text-muted">Quantity: @details.Count</small>
-									</div>
-									<span class="text-muted">@details.Price * @details.Count </span>
-								</li>
+									<li class="list-group-item d-flex justify-content-between">
+										<div>
+											<h6 class="my-0">@details.Product.Title</h6>
+											<small class="text-muted">Quantity: @details.Count</small>
+										</div>
+										<span class="text-muted">@((details.Price * details.Count).ToString("c")) </span>
+									</li>
 								}
-
 
 								<li class="list-group-item d-flex justify-content-between bg-light">
 									<small class="text-info">Total (USD)</small>
@@ -107,16 +107,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-footer pb-3">
+			<div class="card-footer">
 				<div class="row">
 					<div class="col-12 col-md-8 pt-2">
 						<p style="color:maroon; font-size:14px;">
-							Estimate Arrival Date: @DateTime.Now.AddDays(7).ToShortDateString() - @DateTime.Now.AddDays(14).ToShortDateString()
-
+							Estimate Arrival Date:
+							@DateTime.Now.AddDays(7).ToShortDateString() - @DateTime.Now.AddDays(14).ToShortDateString()
 						</p>
 					</div>
-					<div class="col-12 col-md-4 pb-4">
-						<button asp-action="OrderConfirmation" type="submit" value="Place Order" class="btn btn-primary form-control">Place Order</button>
+					<div class="col-12 col-md-4">
+						<button type="submit" value="Place Order" class="btn btn-primary form-control">Place Order</button>
 					</div>
 				</div>
 			</div>
