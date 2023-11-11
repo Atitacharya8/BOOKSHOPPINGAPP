@@ -11,3 +11,4 @@ namespace BOOKSHOPPING.DataAccess.DbInitializer
         void Initialize();
     }
 }
+    
