@@ -1,0 +1,14 @@
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\bin\Release\net7.0\BOOKSHOPPING.Utility.deps.json
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\bin\Release\net7.0\BOOKSHOPPING.Utility.runtimeconfig.json
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\bin\Release\net7.0\BOOKSHOPPING.Utility.dll
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\bin\Release\net7.0\BOOKSHOPPING.Utility.pdb
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.csproj.AssemblyReference.cache
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.AssemblyInfoInputs.cache
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.AssemblyInfo.cs
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.csproj.CoreCompileInputs.cache
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.dll
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\refint\BOOKSHOPPING.Utility.dll
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.pdb
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\BOOKSHOPPING.Utility.genruntimeconfig.cache
+C:\Users\atita\source\repos\BOOKSHOPPING\BOOKSHOPPINGAPP\BOOKSHOPPING.Utility\obj\Release\net7.0\ref\BOOKSHOPPING.Utility.dll
