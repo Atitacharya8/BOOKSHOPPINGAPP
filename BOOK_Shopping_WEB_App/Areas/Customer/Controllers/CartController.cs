@@ -203,7 +203,7 @@ namespace BOOK_Shopping_WEB_App.Areas.Customer.Controllers
                     _unitOfWork.Save();
                 }
 
-
+                HttpContext.Session.Clear();
             }
 
             List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart
